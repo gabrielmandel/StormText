@@ -50,7 +50,6 @@ namespace StormText
             this.centralizarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.esquerdaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.direitaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.justificarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.tsbtnNovo = new FontAwesome.Sharp.IconToolStripButton();
             this.tsbtnAbrir = new FontAwesome.Sharp.IconToolStripButton();
@@ -67,13 +66,13 @@ namespace StormText
             this.tsbtnAlinharEsq = new FontAwesome.Sharp.IconToolStripButton();
             this.tsbtnAlinharDir = new FontAwesome.Sharp.IconToolStripButton();
             this.tsbtnCentralizar = new FontAwesome.Sharp.IconToolStripButton();
-            this.tstnJustificar = new FontAwesome.Sharp.IconToolStripButton();
             this.richTextBox1 = new System.Windows.Forms.RichTextBox();
             this.fontDialog1 = new System.Windows.Forms.FontDialog();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.printDialog1 = new System.Windows.Forms.PrintDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
+            this.tsbtnImprimir = new FontAwesome.Sharp.IconToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -106,7 +105,7 @@ namespace StormText
             // novoToolStripMenuItem
             // 
             this.novoToolStripMenuItem.Name = "novoToolStripMenuItem";
-            this.novoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.novoToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.novoToolStripMenuItem.Text = "Novo";
             this.novoToolStripMenuItem.Click += new System.EventHandler(this.novoToolStripMenuItem_Click);
             // 
@@ -119,7 +118,7 @@ namespace StormText
             // salvarToolStripMenuItem
             // 
             this.salvarToolStripMenuItem.Name = "salvarToolStripMenuItem";
-            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.salvarToolStripMenuItem.Size = new System.Drawing.Size(120, 22);
             this.salvarToolStripMenuItem.Text = "Salvar";
             this.salvarToolStripMenuItem.Click += new System.EventHandler(this.salvarToolStripMenuItem_Click);
             // 
@@ -154,25 +153,25 @@ namespace StormText
             // copiarToolStripMenuItem
             // 
             this.copiarToolStripMenuItem.Name = "copiarToolStripMenuItem";
-            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.copiarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.copiarToolStripMenuItem.Text = "Copiar";
             // 
             // colarToolStripMenuItem
             // 
             this.colarToolStripMenuItem.Name = "colarToolStripMenuItem";
-            this.colarToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.colarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.colarToolStripMenuItem.Text = "Colar";
             // 
             // desfazerToolStripMenuItem
             // 
             this.desfazerToolStripMenuItem.Name = "desfazerToolStripMenuItem";
-            this.desfazerToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.desfazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.desfazerToolStripMenuItem.Text = "Desfazer";
             // 
             // refazerToolStripMenuItem
             // 
             this.refazerToolStripMenuItem.Name = "refazerToolStripMenuItem";
-            this.refazerToolStripMenuItem.Size = new System.Drawing.Size(118, 22);
+            this.refazerToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.refazerToolStripMenuItem.Text = "Refazer";
             // 
             // formatarToolStripMenuItem
@@ -189,19 +188,19 @@ namespace StormText
             // negritoToolStripMenuItem
             // 
             this.negritoToolStripMenuItem.Name = "negritoToolStripMenuItem";
-            this.negritoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.negritoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.negritoToolStripMenuItem.Text = "Negrito";
             // 
             // italicoToolStripMenuItem
             // 
             this.italicoToolStripMenuItem.Name = "italicoToolStripMenuItem";
-            this.italicoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.italicoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.italicoToolStripMenuItem.Text = "Italico";
             // 
             // sublinhadoToolStripMenuItem
             // 
             this.sublinhadoToolStripMenuItem.Name = "sublinhadoToolStripMenuItem";
-            this.sublinhadoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.sublinhadoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.sublinhadoToolStripMenuItem.Text = "Sublinhado";
             // 
             // alinhamentoToolStripMenuItem
@@ -209,35 +208,28 @@ namespace StormText
             this.alinhamentoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.centralizarToolStripMenuItem,
             this.esquerdaToolStripMenuItem,
-            this.direitaToolStripMenuItem,
-            this.justificarToolStripMenuItem});
+            this.direitaToolStripMenuItem});
             this.alinhamentoToolStripMenuItem.Name = "alinhamentoToolStripMenuItem";
-            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.alinhamentoToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.alinhamentoToolStripMenuItem.Text = "Alinhamento";
             // 
             // centralizarToolStripMenuItem
             // 
             this.centralizarToolStripMenuItem.Name = "centralizarToolStripMenuItem";
-            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.centralizarToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.centralizarToolStripMenuItem.Text = "Centralizar";
             // 
             // esquerdaToolStripMenuItem
             // 
             this.esquerdaToolStripMenuItem.Name = "esquerdaToolStripMenuItem";
-            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.esquerdaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.esquerdaToolStripMenuItem.Text = "Esquerda";
             // 
             // direitaToolStripMenuItem
             // 
             this.direitaToolStripMenuItem.Name = "direitaToolStripMenuItem";
-            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
+            this.direitaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.direitaToolStripMenuItem.Text = "Direita";
-            // 
-            // justificarToolStripMenuItem
-            // 
-            this.justificarToolStripMenuItem.Name = "justificarToolStripMenuItem";
-            this.justificarToolStripMenuItem.Size = new System.Drawing.Size(130, 22);
-            this.justificarToolStripMenuItem.Text = "Justificar";
             // 
             // toolStrip1
             // 
@@ -245,6 +237,7 @@ namespace StormText
             this.tsbtnNovo,
             this.tsbtnAbrir,
             this.btn_salvar,
+            this.tsbtnImprimir,
             this.tsSeparator,
             this.tsbtnCopiar,
             this.tsbtnColar,
@@ -256,8 +249,7 @@ namespace StormText
             this.tsSeparator3,
             this.tsbtnAlinharEsq,
             this.tsbtnAlinharDir,
-            this.tsbtnCentralizar,
-            this.tstnJustificar});
+            this.tsbtnCentralizar});
             this.toolStrip1.Location = new System.Drawing.Point(0, 24);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(800, 25);
@@ -287,6 +279,7 @@ namespace StormText
             this.tsbtnAbrir.Name = "tsbtnAbrir";
             this.tsbtnAbrir.Size = new System.Drawing.Size(23, 22);
             this.tsbtnAbrir.Text = "Abrir";
+            this.tsbtnAbrir.Click += new System.EventHandler(this.tsbtnAbrir_Click);
             // 
             // btn_salvar
             // 
@@ -315,6 +308,7 @@ namespace StormText
             this.tsbtnCopiar.Name = "tsbtnCopiar";
             this.tsbtnCopiar.Size = new System.Drawing.Size(23, 22);
             this.tsbtnCopiar.Text = "Copiar";
+            this.tsbtnCopiar.Click += new System.EventHandler(this.tsbtnCopiar_Click);
             // 
             // tsbtnColar
             // 
@@ -326,6 +320,7 @@ namespace StormText
             this.tsbtnColar.Name = "tsbtnColar";
             this.tsbtnColar.Size = new System.Drawing.Size(23, 22);
             this.tsbtnColar.Text = "Colar";
+            this.tsbtnColar.Click += new System.EventHandler(this.tsbtnColar_Click);
             // 
             // tsSeparator2
             // 
@@ -342,6 +337,7 @@ namespace StormText
             this.tsbtnNegrito.Name = "tsbtnNegrito";
             this.tsbtnNegrito.Size = new System.Drawing.Size(23, 22);
             this.tsbtnNegrito.Text = "Negrito";
+            this.tsbtnNegrito.Click += new System.EventHandler(this.tsbtnNegrito_Click);
             // 
             // tsbtnItalico
             // 
@@ -353,6 +349,7 @@ namespace StormText
             this.tsbtnItalico.Name = "tsbtnItalico";
             this.tsbtnItalico.Size = new System.Drawing.Size(23, 22);
             this.tsbtnItalico.Text = "Italico";
+            this.tsbtnItalico.Click += new System.EventHandler(this.tsbtnItalico_Click);
             // 
             // tsbtnSublinhado
             // 
@@ -364,6 +361,7 @@ namespace StormText
             this.tsbtnSublinhado.Name = "tsbtnSublinhado";
             this.tsbtnSublinhado.Size = new System.Drawing.Size(23, 22);
             this.tsbtnSublinhado.Text = "Sublinhado";
+            this.tsbtnSublinhado.Click += new System.EventHandler(this.tsbtnSublinhado_Click);
             // 
             // tsbtnFonte
             // 
@@ -391,6 +389,7 @@ namespace StormText
             this.tsbtnAlinharEsq.Name = "tsbtnAlinharEsq";
             this.tsbtnAlinharEsq.Size = new System.Drawing.Size(23, 22);
             this.tsbtnAlinharEsq.Text = "Alinhar a esquerda";
+            this.tsbtnAlinharEsq.Click += new System.EventHandler(this.tsbtnAlinharEsq_Click);
             // 
             // tsbtnAlinharDir
             // 
@@ -402,6 +401,7 @@ namespace StormText
             this.tsbtnAlinharDir.Name = "tsbtnAlinharDir";
             this.tsbtnAlinharDir.Size = new System.Drawing.Size(23, 22);
             this.tsbtnAlinharDir.Text = "Alinhar a direita";
+            this.tsbtnAlinharDir.Click += new System.EventHandler(this.tsbtnAlinharDir_Click);
             // 
             // tsbtnCentralizar
             // 
@@ -413,17 +413,7 @@ namespace StormText
             this.tsbtnCentralizar.Name = "tsbtnCentralizar";
             this.tsbtnCentralizar.Size = new System.Drawing.Size(23, 22);
             this.tsbtnCentralizar.Text = "Centralizar";
-            // 
-            // tstnJustificar
-            // 
-            this.tstnJustificar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.tstnJustificar.IconChar = FontAwesome.Sharp.IconChar.AlignJustify;
-            this.tstnJustificar.IconColor = System.Drawing.Color.Black;
-            this.tstnJustificar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.tstnJustificar.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.tstnJustificar.Name = "tstnJustificar";
-            this.tstnJustificar.Size = new System.Drawing.Size(23, 22);
-            this.tstnJustificar.Text = "Justificar";
+            this.tsbtnCentralizar.Click += new System.EventHandler(this.tsbtnCentralizar_Click);
             // 
             // richTextBox1
             // 
@@ -438,9 +428,29 @@ namespace StormText
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.Filter = "(*.TXT)|*.TXT";
+            // 
             // printDialog1
             // 
             this.printDialog1.UseEXDialog = true;
+            // 
+            // printDocument1
+            // 
+            this.printDocument1.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDocument1_PrintPage);
+            // 
+            // tsbtnImprimir
+            // 
+            this.tsbtnImprimir.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.tsbtnImprimir.IconChar = FontAwesome.Sharp.IconChar.Print;
+            this.tsbtnImprimir.IconColor = System.Drawing.Color.Black;
+            this.tsbtnImprimir.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.tsbtnImprimir.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.tsbtnImprimir.Name = "tsbtnImprimir";
+            this.tsbtnImprimir.Size = new System.Drawing.Size(23, 22);
+            this.tsbtnImprimir.Text = "Imprimir";
+            this.tsbtnImprimir.Click += new System.EventHandler(this.tsbtnImprimir_Click);
             // 
             // FormPrincipal
             // 
@@ -486,7 +496,6 @@ namespace StormText
         private System.Windows.Forms.ToolStripMenuItem centralizarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem esquerdaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem direitaToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem justificarToolStripMenuItem;
         private FontAwesome.Sharp.IconToolStripButton tsbtnNovo;
         private FontAwesome.Sharp.IconToolStripButton tsbtnAbrir;
         private FontAwesome.Sharp.IconToolStripButton btn_salvar;
@@ -502,13 +511,13 @@ namespace StormText
         private FontAwesome.Sharp.IconToolStripButton tsbtnAlinharEsq;
         private FontAwesome.Sharp.IconToolStripButton tsbtnAlinharDir;
         private FontAwesome.Sharp.IconToolStripButton tsbtnCentralizar;
-        private FontAwesome.Sharp.IconToolStripButton tstnJustificar;
         private System.Windows.Forms.RichTextBox richTextBox1;
         private System.Windows.Forms.FontDialog fontDialog1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.PrintDialog printDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
+        private FontAwesome.Sharp.IconToolStripButton tsbtnImprimir;
     }
 }
 
